@@ -13,8 +13,10 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: argocd-server
-          servicePort: 80
+          service:
+            name: argocd-server
+            port:
+              number: 80
   tls:
     - hosts:
       - argocd.rinzler.tech
