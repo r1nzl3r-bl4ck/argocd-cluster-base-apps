@@ -8,6 +8,7 @@ metadata:
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     cert-manager.io/cluster-issuer: le-clusterissuer
+    acme.cert-manager.io/http01-edit-in-place: "true"
 spec:
   rules:
   - host: argocd.rinzler.tech
