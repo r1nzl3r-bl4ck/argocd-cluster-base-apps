@@ -8,7 +8,6 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     cert-manager.io/cluster-issuer: le-clusterissuer
     acme.cert-manager.io/http01-edit-in-place: "true"
-    ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
