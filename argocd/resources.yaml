@@ -2526,7 +2526,6 @@ spec:
             weight: 5
       containers:
       - command:
-        - /shared/app        
         - /shared/argocd-dex
         - rundex
         image: ghcr.io/dexidp/dex:v2.27.0
