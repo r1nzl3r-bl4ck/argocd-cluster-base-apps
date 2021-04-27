@@ -2526,7 +2526,7 @@ spec:
             weight: 5
       containers:
       - command:
-        - /shared/argocd-dex
+        - /shared/app        - /shared/argocd-dex
         - rundex
         image: ghcr.io/dexidp/dex:v2.27.0
         imagePullPolicy: Always
@@ -2740,6 +2740,7 @@ spec:
         - argocd-server
         - --staticassets
         - /shared/app
+        - --insecure
         image: quay.io/argoproj/argocd:v2.0.0
         imagePullPolicy: Always
         livenessProbe:
