@@ -10,10 +10,7 @@ spec:
       name: le-clusterissuer
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
-    - selector:
-        dnsNames:
-        - '*.rinzler.tech'
-      dns01:
+    - dns01:
         webhook:
           config:
             apiKeySecretRef:
@@ -21,7 +18,7 @@ spec:
               key: token
             production: true
             ttl: 600
-          groupName: acme.mycompany.com
+          groupName: acme.rinzler.tech
           solverName: godaddy
 #      http01:
 #       ingress:
@@ -39,10 +36,7 @@ spec:
       name: le-staging-clusterissuer
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     solvers:
-    - selector:
-        dnsNames:
-        - '*.rinzler.tech'
-      dns01:
+    - dns01:
         webhook:
           config:
             apiKeySecretRef:
@@ -50,7 +44,7 @@ spec:
               key: token
             production: true
             ttl: 600
-          groupName: acme.mycompany.com
+          groupName: acme.rinzler.tech
           solverName: godaddy
 #      http01:
 #       ingress:
