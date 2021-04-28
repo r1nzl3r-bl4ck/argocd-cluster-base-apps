@@ -24,4 +24,4 @@ spec:
   tls:
     - hosts:
       - argocd.rinzler.tech
-      secretName: argocd-cert-manager-ctls
+      secretName: argocd-tls
