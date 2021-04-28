@@ -10,9 +10,22 @@ spec:
       name: le-clusterissuer
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
-    - http01:
-       ingress:
-         class:  nginx
+    - selector:
+        dnsNames:
+        - '*.rinzler.tech'
+      dns01:
+        webhook:
+          config:
+            apiKeySecretRef:
+              name: godaddy-api-key
+              key: token
+            production: true
+            ttl: 600
+          groupName: acme.rinzler.tech
+          solverName: godaddy
+#      http01:
+#       ingress:
+#         class:  nginx
 ---
 apiVersion: cert-manager.io/v1alpha3
 kind: ClusterIssuer
@@ -26,6 +39,19 @@ spec:
       name: le-staging-clusterissuer
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     solvers:
-    - http01:
-       ingress:
-         class:  nginx
+    - selector:
+        dnsNames:
+        - '*.rinzler.tech'
+      dns01:
+        webhook:
+          config:
+            apiKeySecretRef:
+              name: godaddy-api-key
+              key: token
+            production: true
+            ttl: 600
+          groupName: acme.rinzler.tech 
+          solverName: godaddy
+#      http01:
+#       ingress:
+#         class:  nginx
