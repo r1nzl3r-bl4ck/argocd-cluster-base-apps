@@ -21,7 +21,7 @@ spec:
               key: token
             production: true
             ttl: 600
-          groupName: acme.rinzler.tech
+          groupName: acme.mycompany.com
           solverName: godaddy
 #      http01:
 #       ingress:
@@ -50,7 +50,7 @@ spec:
               key: token
             production: true
             ttl: 600
-          groupName: acme.rinzler.tech 
+          groupName: acme.mycompany.com
           solverName: godaddy
 #      http01:
 #       ingress:
