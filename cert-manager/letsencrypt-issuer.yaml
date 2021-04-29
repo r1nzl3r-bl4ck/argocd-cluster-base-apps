@@ -15,7 +15,7 @@ spec:
           config:
             apiKeySecretRef:
               name: godaddy-api-key
-              key: token
+              key: key
             production: true
             ttl: 600
           groupName: acme.mycompany.com
@@ -41,7 +41,7 @@ spec:
           config:
             apiKeySecretRef:
               name: godaddy-api-key
-              key: token
+              key: key
             production: true
             ttl: 600
           groupName: acme.mycompany.com
