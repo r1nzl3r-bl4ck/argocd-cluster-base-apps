@@ -12,7 +12,7 @@ spec:
     solvers:
     - dns01:
         acmedns:
-          host: https://argocd.rinzler.com
+          host: https://auth.acme-dns.io
           accountSecretRef:
             name: acme-dns
             key: acmedns.json
@@ -34,7 +34,7 @@ spec:
     solvers:
     - dns01:
         acmedns:
-          host: https://argocd.rinzler.tech
+          host: https://auth.acme-dns.io
           accountSecretRef:
             name: acme-dns
             key: acmedns.json
