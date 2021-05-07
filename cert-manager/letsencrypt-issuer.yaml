@@ -11,15 +11,11 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
     - dns01:
-        webhook:
-          config:
-            apiKeySecretRef:
-              name: godaddy-api-key
-              key: key
-            production: true
-            ttl: 600
-          groupName: acme.mycompany.com
-          solverName: godaddy
+        acmedns:
+          host: https://acme.example.com
+          accountSecretRef:
+            name: acme-dns
+            key: acmedns.json
 #      http01:
 #       ingress:
 #         class:  nginx
@@ -37,15 +33,11 @@ spec:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     solvers:
     - dns01:
-        webhook:
-          config:
-            apiKeySecretRef:
-              name: godaddy-api-key
-              key: key
-            production: true
-            ttl: 600
-          groupName: acme.mycompany.com
-          solverName: godaddy
+        acmedns:
+          host: https://acme.example.com
+          accountSecretRef:
+            name: acme-dns
+            key: acmedns.json
 #      http01:
 #       ingress:
 #         class:  nginx
