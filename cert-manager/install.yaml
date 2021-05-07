@@ -26149,9 +26149,8 @@ spec:
         - --v=2
         - --cluster-resource-namespace=$(POD_NAMESPACE)
         - --leader-election-namespace=kube-system
-        extraArgs:
-          - --dns01-recursive-nameservers="1.1.1.1:53"
-          - --dns01-recursive-nameservers-only=true
+        - --dns01-recursive-nameservers="1.1.1.1:53"
+        - --dns01-recursive-nameservers-only=true
         env:
         - name: POD_NAMESPACE
           valueFrom:
