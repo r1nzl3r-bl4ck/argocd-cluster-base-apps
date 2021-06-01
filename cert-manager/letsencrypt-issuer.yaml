@@ -10,15 +10,9 @@ spec:
       name: le-clusterissuer
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
-    - dns01:
-        acmedns:
-          host: https://auth.acme-dns.io
-          accountSecretRef:
-            name: acme-dns
-            key: acmedns.json
-#      http01:
-#       ingress:
-#         class:  nginx
+      http01:
+       ingress:
+         class:  nginx
 ---
 apiVersion: cert-manager.io/v1alpha3
 kind: ClusterIssuer
@@ -32,12 +26,6 @@ spec:
       name: le-staging-clusterissuer
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     solvers:
-    - dns01:
-        acmedns:
-          host: https://auth.acme-dns.io
-          accountSecretRef:
-            name: acme-dns
-            key: acmedns.json
-#      http01:
-#       ingress:
-#         class:  nginx
+      http01:
+       ingress:
+         class:  nginx
