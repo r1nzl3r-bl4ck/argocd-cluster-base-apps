@@ -4,6 +4,7 @@ metadata:
   name: nginx-ingress
   namespace: nginx-ingress
 spec:
+  externalTrafficPolicy: Local
   type: LoadBalancer
   ports:
   - port: 80
@@ -16,4 +17,3 @@ spec:
     name: https
   selector:
     app: nginx-ingress
-
